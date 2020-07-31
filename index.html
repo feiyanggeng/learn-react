@@ -1,137 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
-    <div id="main" style="width: 600px;height:400px;"></div>
 </body>
-<script src="./js/echarts/echarts.js"></script>
 <script>
-     // 基于准备好的dom，初始化echarts实例
-    var myChart = echarts.init(document.getElementById('main'));
-    let appAccessRankingData = ['192.167.3.4', '192.167.3.4', '192.167.3.4', '192.167.3.4', '192.167.3.4', '192.167.3.4']
-    let appAccessRankingData1 = ['88', '99', '55', '2', '4', '6']
-    let maxValArr_1 = ['100', '100', '100', '100', '100', '100']
-    let maxValArr_2 = ['100', '100', '100', '100', '100', '100']
-       let option23 = {
-            color: ["#4293FF"],
-            grid: {
-                left: "18%",
-                top: "8%",
-                bottom: "6%",
-                right: "15%",
-            },
-            xAxis: {
-                max: maxValArr_2,
-                splitLine: {
-                    show: false
-                },
-                offset: 20,
-                axisTick: {
-                    show: false
-                },
-                axisLine: {
-                    show: false
-                },
-                axisLabel: {
-                    show: false
-                }
-            },
-            yAxis: [{
-                type: 'category',
-                axisLine: { //y轴
-                    show: false
-                },
-                axisTick: { //y轴刻度线
-                    show: false
-                },
-                splitLine: { //网格线
-                    show: false
-                },
-                axisLabel: {
-                    color: "#000",
-                    padding: [2.5, 0, 0, 0],
-                    fontSize: 12,
-                },
-                triggerEvent: true,
-                data: appAccessRankingData
-            },
-            {
-                type: 'category',
-                axisLine: { //y轴
-                    show: false
-                },
-                axisTick: { //y轴刻度线
-                    show: false
-                },
-                splitLine: { //网格线
-                    show: false
-                },
-                axisLabel: {
-                    formatter: '{value} 次',
-                    textStyle: {
-                        color: "#000",
-                        padding: [0, 0, 0, 20],
-                        fontSize: 12,
-                    }
-                },
-                data: appAccessRankingData1
-            }
-            ],
-            series: [{
-                tooltip: {
-                    show: false
-                },
-                cursor: "default",
-                z: 4,
-                silent: true, //取消所有鼠标响应事件
-                type: "pictorialBar",
-                symbol: "rect",
-                label: {
-                    show: false
-                },
-                itemStyle: {
-                    normal: {
-                        color: "#CFD0D1",
-                    }
-                },
-                symbolRepeat: "true",
-                symbolMargin: "20%",
-                symbolClip: false,
-                symbolSize: [6, 10],
-                symbolPosition: "start",
-                data: maxValArr_2
-            },
-            {
-                z: 6,
-                type: "pictorialBar",
-                symbol: "rect",
-                label: {
-                    normal: {
-                        show: false,
-                        position: "right",
-                        color: "#000",
-                        fontSize: 12
-                    }
-                },
-                itemStyle: {
-                    normal: {
-                        color: "#4EADF4",
-                    }
-                },
-                symbolRepeat: "true",
-                symbolMargin: "20%",
-                symbolClip: true,
-                symbolSize: [6, 10],
-                symbolPosition: "start",
-                data: appAccessRankingData1
-            }
-            ]
-        };
-        myChart.setOption(option23, true);
 
 </script>
+
 </html>

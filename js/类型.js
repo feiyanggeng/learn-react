@@ -71,6 +71,7 @@ var C;
     C[C["one"] = 0] = "one";
     C[C["two"] = 2] = "two";
 })(C || (C = {}));
+var a = [1, "s"];
 function getName(o) {
     return o.name;
 }
