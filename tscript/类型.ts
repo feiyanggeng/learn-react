@@ -89,8 +89,6 @@ enum C {
 type E = number | string;
 let a: E[] = [1, "s"];
 
-// 函数
-
 //  接口
 interface O {
   name: string;
@@ -98,6 +96,10 @@ interface O {
 
 function getName(o: O): string {
   return o.name;
+}
+
+interface type {
+  onclick?: () => {};
 }
 
 interface P {

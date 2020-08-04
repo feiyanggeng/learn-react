@@ -55,6 +55,11 @@ var B;
     B[B["name"] = 1] = "name";
     B[B["height"] = 2] = "height";
 })(B || (B = {}));
+var D;
+(function (D) {
+    D["name"] = "zs";
+    D["name2"] = "zs";
+})(D || (D = {}));
 // 此时等于 2 的key 有两个这个时候 反查的时候 2 对应的只有 height ， age 会被覆盖掉
 /**
  * 编译的结果
