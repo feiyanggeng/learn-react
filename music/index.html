@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<p>歌单</p>
+<ul id="list"></ul>
+<p id="show"></p>
+<button onclick="preClick()">pre</button>
+<button onclick="nextClick()">next</button>
+
+<body>
+</body>
+<script src="./index.js"></script>
+<script>
+    const show = document.getElementById('show')
+    const list = document.getElementById('list')
+    let lis = ''
+    musicList.forEach((element, index) => {
+        lis += `<li>${index}-${element}</li>`
+    });
+    list.innerHTML = lis
+    function nextClick() {
+        let text = next()
+        show.innerText = text
+    }
+    function preClick() {
+        let text = pre()
+        show.innerText = text
+    }
+    // setInterval(() => {
+    //     nextClick()
+    // }, 1000);
+</script>
+
+</html>
